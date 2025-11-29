@@ -9,9 +9,7 @@ export default function App() {
     <CssVarsProvider>
       <BrowserRouter>
         <Routes>
-          {/* Default redirect */}
           <Route path="/" element={<Navigate to="/login" />} />
-
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/dashboard" element={<Dashboard />} />
