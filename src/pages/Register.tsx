@@ -87,7 +87,6 @@ export default function Login() {
           </Link>
         </Typography>
 
-        {/* Google Button */}
         <Button
           variant="soft"
           startDecorator={
@@ -153,20 +152,12 @@ export default function Login() {
             </Link>
           </Box>
 
-          <Button
+          <button
             type="submit"
-            sx={{
-              mt: 4,
-              py: 1.4,
-              textTransform: "none",
-              fontWeight: "bold",
-              fontSize: "1rem",
-              borderRadius: "md",
-            }}
-            fullWidth
+            className="w-full py-6 mt-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-base font-semibold"
           >
             Sign up
-          </Button>
+          </button>
         </form>
 
         <Typography
@@ -177,7 +168,6 @@ export default function Login() {
         </Typography>
       </Sheet>
 
-      {/* RIGHT PHOTO PANEL */}
       <Box
         sx={{
           display: { xs: "none", md: "block" },

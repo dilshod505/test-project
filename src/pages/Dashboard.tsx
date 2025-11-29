@@ -7,7 +7,7 @@ import { Table } from "antd";
 
 export default function Dashboard() {
   const [users, setUsers] = useState([]);
-  const [page, setPage] = useState(0); // ReactPaginate 0dan boshlaydi
+  const [page, setPage] = useState(0);
   const [totalPages, setTotalPages] = useState(0);
   const [totalItems, setTotalItems] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
@@ -25,8 +25,6 @@ export default function Dashboard() {
       const json = await res.json();
 
       setUsers(json.data.data);
-
-      // yangi qo'shilganlar
       setTotalPages(json.data.totalPages);
       setTotalItems(json.data.totalItems);
       setCurrentPage(json.data.page);
@@ -162,13 +160,9 @@ export default function Dashboard() {
                   marginPagesDisplayed={1}
                   pageRangeDisplayed={3}
                   onPageChange={handlePageChange}
-                  /* li tag */
                   pageClassName="list-none"
-                  /* ACTIVE li tag — majburiy bir xil size */
                   activeClassName="!w-10 !h-10 !flex !items-center !justify-center"
-                  /* a tag — barcha uchun bir xil size */
                   pageLinkClassName="w-10 h-10 flex items-center justify-center rounded-full border text-blue-600 text-lg transition"
-                  /* active a tag — faqat ranglar o‘zgaradi */
                   activeLinkClassName="!bg-green-600 !text-white !border-green-600"
                   forcePage={page}
                   className="flex justify-end gap-2 items-center"

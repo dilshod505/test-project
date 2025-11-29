@@ -87,7 +87,6 @@ export default function Login() {
           </Link>
         </Typography>
 
-        {/* Google Button */}
         <Button
           variant="soft"
           startDecorator={
@@ -165,7 +164,6 @@ export default function Login() {
         </Typography>
       </Sheet>
 
-      {/* RIGHT PHOTO PANEL */}
       <Box
         sx={{
           display: { xs: "none", md: "block" },

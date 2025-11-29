@@ -70,7 +70,6 @@ export default function Layout({ children }: { children: any }) {
         />
       </Sider>
 
-      {/* Content */}
       <AntLayout>
         <Content
           style={{
